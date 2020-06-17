@@ -27,11 +27,11 @@
           rtMaven.run pom: './pom.xml', goals: 'clean install',buildInfo: buildInfo
       }
 
-      stage('deploy to test') {
-          buildInfo.env.capture = true
-          rtMaven.deployer.deployArtifacts buildInfo
-          artiServer.publishBuildInfo buildInfo
-      }
+      //stage('deploy to test') {
+      //    buildInfo.env.capture = true
+     //     rtMaven.deployer.deployArtifacts buildInfo
+     //     artiServer.publishBuildInfo buildInfo
+     // }
 
       stage('jira') {}
 
