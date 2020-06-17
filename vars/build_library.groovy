@@ -24,7 +24,8 @@
           descriptor.setVersion "org.wangqing:zipkin-service","1.0.$BUILD_NUMBER"
           descriptor.transform()
           rtMaven.tool = 'maven363'
-          rtMaven.run pom: './pom.xml', goals: 'clean install',buildInfo: buildInfo
+          //rtMaven.run pom: './pom.xml', goals: 'clean install',buildInfo: buildInfo
+          rtMaven.run pom: './pom.xml', goals: 'clean package',buildInfo: buildInfo
       }
 
       //stage('deploy to test') {
